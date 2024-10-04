@@ -56,7 +56,7 @@ if (sum % 2 == 0) {
         message = `Hai vinto ;) La somma dei numeri è pari: ${sum}`;
 
     } else {
-        message = `Ha vinto il pc :( La somma dei numeri è pari: ${sum}`;
+        message = `Hai perso :( La somma dei numeri è pari: ${sum}`;
     }
 
 } else {
@@ -66,7 +66,7 @@ if (sum % 2 == 0) {
         message = `Hai vinto ;) La somma dei numeri è dispari: ${sum}`;
         
     } else {
-        message = `Ha vinto il pc :( La somma dei numeri è dispari: ${sum}`;
+        message = `Hai perso :( La somma dei numeri è dispari: ${sum}`;
     }
 }
 

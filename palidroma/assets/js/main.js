@@ -13,33 +13,28 @@ user_word = prompt("Ciao, inserisci una parola");
 // stampo la parola in console
 console.log(user_word);
 
-// to split esample
-// let esample = "radar";
-// let esample_split = esample.split("");
-// console.log(esample_split); 
-
-
-// to join es
-// let esample = ["radar", "ciao", "a", "tutti"];
-// let esample_join = esample.join();
-// console.log(esample_join);
 
 // 3. Elaborazione del codice
 // creo una funzione per verificare se è palindroma o no
 function palindrome_word_verification(word) {
 
-    // .split serve per dividere una stringa in un array di caratteri
-    // .reverse serve per invertire l'ordine degli elementi in un array
-    // .join return an array as a string
-    const palindrome = word.split("").reverse().join("");
-    
-    if (palindrome == word) {
-        return true // è palindroma
+    // using for loop
+    let user_word_lenght = user_word.length;
+
+    // una parola per essere palindroma la prima metà delle essere uguale alla seconda metà
+    for (let i = 0; i < user_word_lenght / 2; i++) {
+
+        // se il primo carattere non è uguale all'ultimo non è palindroma
+        if (word[i] !== word[user_word_lenght - 1 - i]) {
+            return false
+        } 
     }
 
-    return false; // non è palindroma
+    // se tutti i caratteri sono uguali è palindroma
+    return true
 };
 
+// salvo il return della funzione in una variabile
 let palindrome_word = palindrome_word_verification(user_word);
 
 // se la funzione return true
@@ -47,10 +42,13 @@ if (palindrome_word) {
     message = "La parola è palindroma"
 
     // se la funzione return false
-} else { 
+} else {
     message = "La parola non è palindroma"
 }
 
 
 // 4. Output
 alert(message);
+
+
+

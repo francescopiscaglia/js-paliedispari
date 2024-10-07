@@ -36,6 +36,12 @@ for (let i = 1; i <= 3; i++) {
 }
 
 // creo una funzione per generare un numero random da 1 a 5 per il pc
+/**
+ * 
+ * @param {number} min 
+ * @param {number} max 
+ * @returns {number}
+ */
 function get_rnd_integer(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
@@ -44,8 +50,23 @@ function get_rnd_integer(min, max) {
 let pc_number = get_rnd_integer(1, 5);
 console.log(pc_number);
 
-// faccio la somma tra il numero dell'utente e il random number del pc
-let sum = user_number + pc_number;
+
+// creo una funzione per fare la somma
+/**
+ * 
+ * @param {number} numb_one 
+ * @param {number} numb_two 
+ * @returns {number}
+ */
+function sum_of_two_numbers(numb_one, numb_two) {
+    // faccio la somma tra il numero dell'utente e il random number del pc
+    let sum = numb_one + numb_two;
+
+    return sum
+}
+
+// salvo il risultato in una variabile
+let sum = sum_of_two_numbers(user_number, pc_number);
 
 
 // verifico se sono pari o dispari
